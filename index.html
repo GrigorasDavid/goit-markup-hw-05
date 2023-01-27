@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <title>WebStudio</title>
@@ -16,6 +16,14 @@
     />
   </head>
   <body>
+    <div class="modal is-hidden" data-modal>
+      <div class="inner-modal">
+        <button type="button" class="close-modal" data-model-close>x</button>
+        <svg class="close-modal-icon" width="11" height="11">
+          <use href="./images/block.icon.svg#icon-close-black-18dp-2-1-1"></use>
+        </svg>
+      </div>
+    </div>
     <header class="page-header">
       <div class="container">
         <a href="./index.html" class="logo-link link"
@@ -69,7 +77,8 @@
             EFFECTIVE SOLUTIONS FOR <br />
             YOUR BUSINESS
           </h1>
-          <button class="button-title" type="button">
+
+          <button class="button-title" type="button" data-modal-open="1">
             Request our service
           </button>
         </div>
@@ -455,5 +464,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
